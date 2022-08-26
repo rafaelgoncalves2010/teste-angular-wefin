@@ -1,0 +1,6 @@
+<div class="jumbotron">
+  <h1 class="display-4">Parabéns {{dataRetornada.nomeSolicitante}}, empréstimo realizado</h1>
+  <app-simulacao-emprestimo-processada *ngIf="dataRetornada" [dataRetornada]="dataRetornada" titulo="Empréstimo Contratado:"></app-simulacao-emprestimo-processada>
+
+  <a class="nav-link" style="color:black;margin-top: 5rem;" routerLink="/home">Voltar</a>
+</div>

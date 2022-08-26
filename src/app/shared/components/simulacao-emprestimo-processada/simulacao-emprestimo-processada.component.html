@@ -1,0 +1,8 @@
+<div class="card" style="width: 18rem; margin: 2rem 0 0.5rem 0;">
+    <div class="card-body">
+      <h5 class="card-title">{{titulo}}</h5>
+      <p class="card-text">O valor total com juros seria de {{dataRetornada.valorTotal | currency:'BRL':'':''}} reais.</p>
+      <p class="card-text">Valor por parcela com juros seria de {{dataRetornada.valorParcelas | currency:'BRL':'':''}} reais ao mês.</p>
+      <p class="card-text">Número de parcelas :  {{dataRetornada.numeroParcelas}}</p>
+    </div>
+  </div>

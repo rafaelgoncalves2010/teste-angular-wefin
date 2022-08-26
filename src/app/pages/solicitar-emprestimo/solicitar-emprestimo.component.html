@@ -1,0 +1,31 @@
+<div class="jumbotron">
+    <h1 class="display-4">Solicitação de Empréstimos</h1>
+
+    <form [formGroup]="solicitacaoEmprestimoForm" style="width:50% ;">
+        <div class="form-row">
+            <div class="col-3">
+                <label>Nome do Solicitante</label>
+                <input type="text" class="form-control" formControlName="nomeSolicitante">
+            </div>
+
+            <div class="col-3">
+                <label>Valor Desejado</label>
+                <input [imask]="imaskConfig" type="text" class="form-control" formControlName="valorDesejado">
+            </div>
+
+            <div class="col-3">
+                <label>Número de Parcelas</label>
+                <input type="numer" class="form-control" formControlName="numeroParcelas">
+            </div>
+
+            <div class="col-3">
+                <button (click)="simularEmprestimo()" class="btn btn-primary" style="margin-top: 2rem">Simular Empréstimo</button>
+            </div>
+        </div>
+        <div *ngIf="submeterAcaoForm && solicitacaoEmprestimoForm.invalid" class="alert alert-danger" style="margin-top: 2rem" role="alert">
+            Preencha todos os campos.
+        </div>
+    </form>
+
+    <app-listar-simulacao *ngIf="dataRetornada" [dataRetornada]="dataRetornada"></app-listar-simulacao>
+</div>
